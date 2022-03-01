@@ -15,41 +15,41 @@ namespace Google.Tests
         [Test]
         public void Test2()
         {
-            Browser.Visit("https://automacaocombatista.herokuapp.com/users");
+            //Browser.Visit("https://automacaocombatista.herokuapp.com/users");
 
-            var table = Browser.FindCss("body > div.row > div > table");
+            //var table = Browser.FindCss("body > div.row > div > table");
 
-            var css = table.FindAllCss("tr");
+            //var css = table.FindAllCss("tr");
 
-            ///List<SnapshotElementScope> teste;
-            ///
-            bool texto = false;
-            foreach (var tr in css)
-            {
+            /////List<SnapshotElementScope> teste;
+            /////
+            //bool texto = false;
+            //foreach (var tr in css)
+            //{
 
 
-                var tds = tr.FindAllCss("td");
+            //    var tds = tr.FindAllCss("td");
 
-                for (int i = 0; i < tds.Count(); i ++) 
-                {
-                    var teste = tds.ToList();
+            //    for (int i = 0; i < tds.Count(); i ++) 
+            //    {
+            //        var teste = tds.ToList();
 
-                    texto = teste[i].Text.Contains("aaaaaa");
-                    if (texto)
-                    {
-                        teste[i + 9].Click();
-                    }
-                    break;
-                }
+            //        texto = teste[i].Text.Contains("aaaaaa");
+            //        if (texto)
+            //        {
+            //            teste[i + 9].Click();
+            //        }
+            //        break;
+            //    }
 
-                if (texto)
-                {
-                    break;
-                }
+            //    if (texto)
+            //    {
+            //        break;
+            //    }
 
-            }
+            //}
 
-            var selenium = ((OpenQA.Selenium.Remote.RemoteWebDriver)Browser.Native);
+            //var selenium = ((OpenQA.Selenium.Remote.RemoteWebDriver)Browser.Native);
 
             //var elemetoX = selenium.FindElementById("noticsse");
 
