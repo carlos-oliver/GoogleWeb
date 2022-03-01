@@ -2,7 +2,7 @@
 using Coypu.Drivers.Selenium;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-
+using System;
 
 namespace Google.WebDrivers
 {
@@ -15,13 +15,20 @@ namespace Google.WebDrivers
 
         private static IWebDriver CustomProfile()
         {
+            String driverPath = "/opt/selenium/";
+
+            String driverExecutableFileName = "chromedriver";
+
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.AddArguments("--headless");
             chromeOptions.AddArguments("--disable-gpu");
             chromeOptions.AddArguments("--disable-extensions");
             chromeOptions.AddArguments("no-sandbox");
+            chromeOptions.BinaryLocation = "/opt/google/chrome/chrome";
 
-            return new ChromeDriver(chromeOptions);
+            ChromeDriverService service = ChromeDriverService.CreateDefaultService(driverPath, driverExecutableFileName);
+
+            return new ChromeDriver(service, chromeOptions);
         }
 
     }
