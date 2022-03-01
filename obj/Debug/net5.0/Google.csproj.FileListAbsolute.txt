@@ -98,4 +98,3 @@ C:\qaninja\Google\obj\Debug\net5.0\Google.dll
 C:\qaninja\Google\obj\Debug\net5.0\ref\Google.dll
 C:\qaninja\Google\obj\Debug\net5.0\Google.pdb
 C:\qaninja\Google\obj\Debug\net5.0\Google.genruntimeconfig.cache
-C:\qaninja\Google\obj\Debug\net5.0\Google.csprojAssemblyReference.cache

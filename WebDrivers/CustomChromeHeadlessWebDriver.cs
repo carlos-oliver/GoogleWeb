@@ -15,16 +15,20 @@ namespace Google.WebDrivers
 
         private static IWebDriver CustomProfile()
         {
-            String driverPath = "/opt/selenium/";
+            //String driverPath = "/opt/selenium/";
 
-            String driverExecutableFileName = "chromedriver";
+            //String driverExecutableFileName = "chromedriver";
+
+            String driverPath = "C:\\Driver\\ChromeDriver";
+
+            String driverExecutableFileName = "chromedriver.exe";
 
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.AddArguments("--headless");
             chromeOptions.AddArguments("--disable-gpu");
             chromeOptions.AddArguments("--disable-extensions");
             chromeOptions.AddArguments("no-sandbox");
-            chromeOptions.BinaryLocation = "/opt/google/chrome/chrome";
+            //chromeOptions.BinaryLocation = "/opt/google/chrome/chrome";
 
             ChromeDriverService service = ChromeDriverService.CreateDefaultService(driverPath, driverExecutableFileName);
 

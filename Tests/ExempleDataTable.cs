@@ -15,7 +15,7 @@ namespace Google.Tests
         [Test]
         public void Test2()
         {
-            Browser.Visit("/users");
+            Browser.Visit("https://automacaocombatista.herokuapp.com/users");
 
             var table = Browser.FindCss("body > div.row > div > table");
 
@@ -51,7 +51,7 @@ namespace Google.Tests
 
             var selenium = ((OpenQA.Selenium.Remote.RemoteWebDriver)Browser.Native);
 
-            var elemetoX = selenium.FindElementById("noticsse");
+            //var elemetoX = selenium.FindElementById("noticsse");
 
             //var sel = ((OpenQA.Selenium.IWebDriver)Browser);
 
